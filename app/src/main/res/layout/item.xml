@@ -32,13 +32,13 @@
             >
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/tvName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Lutful bari" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/tvMobile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="01552464940"
