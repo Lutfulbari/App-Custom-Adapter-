@@ -82,12 +82,13 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public View getView(int position, View view, ViewGroup viewGroup) {
 
-           LayoutInflater layoutInflater = (android.view.LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            LayoutInflater layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
             View myView = LayoutInflater.inflate(R.layout.item, viewGroup, false);
 
 
-            ImageView = myView.findViewById(R.id.imageView);
+            View imageView;
+            imageView = myView.findViewById(R.id.imageView);
             TextView tvName = myView.findViewById(R.id.tvName);
             TextView tvMobile = myView.findViewById(R.id.tvMobile);
 
@@ -96,21 +97,20 @@ public class MainActivity extends AppCompatActivity {
             String name = hashMap.get("name");
             String mobile = hashMap.get("name");
 
-            tvName.setText( "name");
-            tvMobile.setText( "mobile");
+            tvName.setText("name");
+            tvMobile.setText("mobile");
 
 
-            View imageView;
             imageView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
+                @Override
+                public void onClick(View v) {
 
-                        Toast.makeText(getApplicationContext(), "hi\n"+name, Toast.LENGTH_LONG) .show();
+                    Toast.makeText(getApplicationContext(), "hi\n" + name, Toast.LENGTH_LONG).show();
 
-                    }
-                });
+                }
+            });
 
-           return myView;
+            return myView;
         }
     }
 }
